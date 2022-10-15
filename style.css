@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  /* ### Primary  */
+  /* - Soft blue: hsl(215, 51%, 70%)  */
+  --sBlue: hsl(215, 51%, 70%);
+  /* Cyan: hsl(178, 100%, 50%)  */
+  --cyan: hsl(178, 100%, 50%);
+
+  /* ### Neutral */
+  /* - Very dark blue (main BG): hsl(217, 54%, 11%) */
+  --vdBlue-main: hsl(217, 54%, 11%);
+  /* Very dark blue (card BG): hsl(216, 50%, 16%) */
+  --vdBlue-card: hsl(216, 50%, 16%);
+  /* - Very dark blue (line): hsl(215, 32%, 27%) */
+  --vdBlue-line: hsl(215, 32%, 27%);
+  /* Pure White: hsl(0, 0%, 100%) */
+  --pWhite: hsl(0, 0%, 100%);
+}
+.name--creator {
+  color: var(--pWhite);
+}
+.name--crypto {
+  color: var(--cyan);
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--vdBlue-main);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+main {
+  background-color: var(--vdBlue-card);
+  color: var(--sBlue);
+  width: 327px;
+  height: 540px;
+  padding: 24px;
+  border-radius: 1rem;
+}
+hr {
+  background-color: var(--vdBlue-line);
+  color: var(--vdBlue-line);
+  margin-bottom: 12px;
+}
+
+.card--img {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 26px;
+}
+
+.card--img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+h1 {
+  color: var(--pWhite);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.monetarization {
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.subitem {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.card--footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.8rem;
+}
+
+.card--footer > img {
+  height: 34px;
+}
