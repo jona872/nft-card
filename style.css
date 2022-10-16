@@ -17,10 +17,15 @@
   /* Pure White: hsl(0, 0%, 100%) */
   --pWhite: hsl(0, 0%, 100%);
 }
+
 .name--creator {
   color: var(--pWhite);
 }
 .name--crypto {
+  color: var(--cyan);
+}
+.name--creator:hover {
+  cursor: pointer;
   color: var(--cyan);
 }
 
@@ -55,23 +60,52 @@ hr {
   color: var(--vdBlue-line);
   margin-bottom: 12px;
 }
-
-.card--img {
+/* // Solution 2, adding effect and ocpacity transition */
+.card {
+  position: relative;
   width: 280px;
   height: 280px;
-  margin-bottom: 26px;
 }
 
-.card--img > img {
+.card--img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+.img-overlay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
+  background: url(./images/icon-view.svg) no-repeat scroll center center
+    hsl(178, 100%, 50%, 0.5);
+
+  /* transition on exit */
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.img-overlay:hover {
+  display: block;
+  opacity: 1;
+  transition: opacity 0.2s;
+  cursor: pointer;
 }
 
 h1 {
   color: var(--pWhite);
   font-size: 1.2rem;
   margin-bottom: 15px;
+}
+h1:hover {
+  cursor: pointer;
+  color: var(--cyan);
 }
 
 p {
@@ -105,3 +139,58 @@ p {
 .card--footer > img {
   height: 34px;
 }
+
+
+/* // // Extra implementations if someone need help */
+/* //Solucion 1 - without hover effect
+.card--img {
+  width: 280px;
+  height: 280px;
+  margin-bottom: 26px;
+}
+
+.card--img > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+} 
+<!-- <div class="card--img">
+  <img src="./images/image-equilibrium.jpg" alt="Equilibrium main logo">
+  <img src="./images/icon-view.svg" hidden alt="Equilibrium main logo">
+</div> -->
+*/
+
+/* // Solution 2 - Simple hide and show containers
+.imageBox {
+  position: relative;
+  float: left;
+  width: 100%;
+  height: 280px;
+}
+.imageInn > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+}
+
+.imageBox .hoverImg {
+  position: absolute;
+  left: 40%;
+  top: 45%;
+  display: none;
+
+}
+
+.imageBox:hover .hoverImg {
+  display: block;
+  width: 100%;
+  height: 100%;
+} 
+<div class="imageBox">
+<div class="imageInn">
+  <img src="images/image-equilibrium.jpg" alt="Default Image">
+</div>
+<div class="hoverImg">
+  <img src="./images/icon-view.svg" alt="Profile Image">
+</div>
+</div> */
