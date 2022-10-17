@@ -139,3 +139,7 @@ p {
 .card--footer > img {
   height: 34px;
 }
+
+a {
+  text-decoration: none;
+}
