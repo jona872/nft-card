@@ -60,7 +60,7 @@ hr {
   color: var(--vdBlue-line);
   margin-bottom: 12px;
 }
-/* // Solution 2, adding effect and ocpacity transition */
+
 .card {
   position: relative;
   width: 280px;
@@ -139,58 +139,3 @@ p {
 .card--footer > img {
   height: 34px;
 }
-
-
-/* // // Extra implementations if someone need help */
-/* //Solucion 1 - without hover effect
-.card--img {
-  width: 280px;
-  height: 280px;
-  margin-bottom: 26px;
-}
-
-.card--img > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-} 
-<!-- <div class="card--img">
-  <img src="./images/image-equilibrium.jpg" alt="Equilibrium main logo">
-  <img src="./images/icon-view.svg" hidden alt="Equilibrium main logo">
-</div> -->
-*/
-
-/* // Solution 2 - Simple hide and show containers
-.imageBox {
-  position: relative;
-  float: left;
-  width: 100%;
-  height: 280px;
-}
-.imageInn > img {
-  width: 100%;
-  height: 100%;
-  border-radius: 0.5rem;
-}
-
-.imageBox .hoverImg {
-  position: absolute;
-  left: 40%;
-  top: 45%;
-  display: none;
-
-}
-
-.imageBox:hover .hoverImg {
-  display: block;
-  width: 100%;
-  height: 100%;
-} 
-<div class="imageBox">
-<div class="imageInn">
-  <img src="images/image-equilibrium.jpg" alt="Default Image">
-</div>
-<div class="hoverImg">
-  <img src="./images/icon-view.svg" alt="Profile Image">
-</div>
-</div> */
